@@ -1,0 +1,106 @@
+<html>
+<body>
+
+    <style>
+  button {
+    margin: 10px;
+  }
+    </style>
+    <h1>Hello!</h1>
+
+    <button OnClick="colorBlue()">Change To Blue</button>
+
+    <p>Click hidden to make the button beside it disappear.</p>
+
+    <h1 id="h1colour"></h1>
+
+    <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
+
+    <input id="shown" type="button" value="Visible">
+
+    <script>
+      function showhidden() {
+        document.getElementById("shown").style.visibility = "hidden"
+        document.getElementsByClassName("button") = "shown"
+      }
+    </script>
+
+    <script>
+
+      function colorBlue()
+      {
+        alert("An alternate design for the website.");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "blue"; 
+        document.getElementsByTagName("body")[0].style.color = "white";
+        document.getElementsByTagName("body")[0].style.fontSize = "20px";
+        let btn
+      }
+    </script>
+
+    <p>Click the button below for more details about me.</p>
+        
+    <button OnClick="myFunction()">Details</button>
+        
+    <p id="script1"></p>
+    
+    <script>
+        function myFunction() {
+          document.getElementById("script1").innerHTML = "I am currently enrolled in the Computing for Business course in DCU." +
+          "I have travelled to several countries.";
+        }
+    </script>
+
+<p id ="question">What is your name?</p>
+
+<input id="button2" type="button" value="Name" onclick="myFunction2()">
+
+<p id="demo2"></p>
+<p id="error"></p>
+
+<script>
+
+function myFunction2() {
+  let text;
+  let user = prompt("Please enter your name: Your name should be at least 3 characters long", "Name");
+  if (user == null || user == "") {
+    text = "User cancelled the prompt.";
+    document.getElementById("demo2").innerHTML = text;
+    document.getElementById("demo2").style.color = "red";
+  } else if (user.length < 3) {
+    text = "Name is too short. Try again.";
+    error = "Try again.";
+    document.getElementById("demo2").innerHTML = text;
+    document.getElementById("error").innerHTML = error;
+  } else if (user == "Eoin") {
+    text = "Hello me! We have the same name!";
+    document.getElementById("question").style.display = "none";
+  } else {
+    text = "Hello " + user + "! Welcome to my website!";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+    document.getElementById("question").style.display = "none";
+  }
+  document.getElementById("demo2").innerHTML = text;
+  }
+</script>
+
+<input id="elem" type="button" value="Click me"/>
+
+<script>
+  function thankyou1() {
+    alert('Thank you for visiting my website!');
+  };
+
+  function thankyou2() {
+    response = prompt("Do you like this website?", "");
+    if (response = "yes"); {
+    alert("Thank you for enjoying my website.")
+    }
+  }
+
+  elem.addEventListener("click", thankyou1); // Thanks!
+  elem.addEventListener("click", thankyou2); // Thanks again!
+</script>
+
+</body>
+
+</html>
