@@ -9,6 +9,7 @@
     <h1>Hello!</h1>
 
     <button OnClick="colorBlue()">Change To Blue</button>
+    <button OnClick="colorWhite()">Change To White</button>
 
     <p>Click hidden to make the button beside it disappear.</p>
 
@@ -25,6 +26,27 @@
       }
     </script>
 
+    <p>Hover over the interests button to display some of my interests.</p>
+
+    <input id="hover" type="button" value="Interests" onmouseover="hoverOver()" onmouseleave="mouseLeave()">
+
+    <ul id="interests"></ul>
+
+    <p id="mouseleave"></p>
+
+    <script>
+      function hoverOver()
+      {
+        document.getElementById("interests").innerHTML = "Chess, France, Creating simple games with Python.";
+      }
+
+      function mouseLeave()
+      {
+        document.getElementById("mouseleave").innerHTML = "Continue for further details about me.";
+        document.getElementById("interests").style.visibility = "hidden";
+      }
+    </script>
+
     <script>
 
       function colorBlue()
@@ -33,20 +55,28 @@
         document.getElementsByTagName("body")[0].style.backgroundColor = "blue"; 
         document.getElementsByTagName("body")[0].style.color = "white";
         document.getElementsByTagName("body")[0].style.fontSize = "20px";
-        let btn
+      }
+
+      function colorWhite()
+      {
+        alert("Returened to standard design.");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "white"; 
+        document.getElementsByTagName("body")[0].style.color = "black";
+        document.getElementsByTagName("body")[0].style.fontSize = "16px";
       }
     </script>
 
     <p>Click the button below for more details about me.</p>
         
-    <button OnClick="myFunction()">Details</button>
+    <input id="Details" type="button" value="Details" OnClick="myFunction()">
         
     <p id="script1"></p>
     
     <script>
         function myFunction() {
           document.getElementById("script1").innerHTML = "I am currently enrolled in the Computing for Business course in DCU." +
-          "I have travelled to several countries.";
+          "I have travelled to several countries across Europe. Some of these include my favourites which are France and Austria." +
+          "I am particularly fond of France for it's history, art and language.";
         }
     </script>
 
