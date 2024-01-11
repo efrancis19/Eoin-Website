@@ -1,0 +1,23 @@
+body {background-color: #ebf2f2;}
+
+h1 {background-color: blue;
+    color: white;
+    padding: 5px;
+    margin-right: 40%;}
+
+h2 {background-color: blue;
+    color: white;
+    padding: 5px;
+    margin-right: 60%;}
+
+input {background-color: #0385ff;
+        color: white;}
+
+#blue {background-color: #0385ff;
+        color: white;}
+
+#blue:hover {background-color: #03b3ff;
+            color: white;}
+
+#white {background-color: white;
+        color: black;};

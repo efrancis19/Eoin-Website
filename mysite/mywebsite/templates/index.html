@@ -1,4 +1,8 @@
+{% load static %}
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_css.css' %}">
+  </head>
 <body>
 
     <style>
@@ -8,12 +12,10 @@
     </style>
     <h1>Hello!</h1>
 
-    <button OnClick="colorBlue()">Change To Blue</button>
-    <button OnClick="colorWhite()">Change To White</button>
+    <input id="blue" type="button" value="Change to Blue" button OnClick="colorBlue()">
+    <input id="white" type="button" value="Change to White" button OnClick="colorWhite()">
 
     <p>Click hidden to make the button beside it disappear.</p>
-
-    <h1 id="h1colour"></h1>
 
     <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
 
@@ -25,6 +27,8 @@
         document.getElementsByClassName("button") = "shown"
       }
     </script>
+
+    <h2>About Me</h2>
 
     <p>Hover over the interests button to display some of my interests.</p>
 
@@ -59,7 +63,7 @@
 
       function colorWhite()
       {
-        alert("Returened to standard design.");
+        alert("Returned to standard design.");
         document.getElementsByTagName("body")[0].style.backgroundColor = "white"; 
         document.getElementsByTagName("body")[0].style.color = "black";
         document.getElementsByTagName("body")[0].style.fontSize = "16px";
@@ -121,9 +125,9 @@ function myFunction2() {
   };
 
   function thankyou2() {
-    response = prompt("Do you like this website?", "");
-    if (response = "yes"); {
-    alert("Thank you for enjoying my website.")
+    response = prompt("Do you like this website? Type yes if you did.", "");
+    if (response == "yes"); {
+    alert("Thank you for enjoying my website.");
     }
   }
 
