@@ -1,6 +1,11 @@
 # Personal Website
 
+## Name
+Personal Website.
 
+## Description
+This website demonstrates much of my skills relating to Javascript such as changing the appearance of the website by clicking a button and the use of an if statement in a prompt.
+I have also included a base CSS design that I will continue to improve in the future.
 
 ## Getting started
 
@@ -51,13 +56,6 @@ When you're ready to make this README your own, just edit this file and use the 
 ## Suggestions for a good README
 
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Personal Website.
-
-## Description
-This website demonstrates much of my skills relating to Javascript such as changing the appearance of the website by clicking a button and the use of an if statement in a prompt.
-I have also included a base CSS design that I will continue to improve in the future.
 
 ## Badges
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
