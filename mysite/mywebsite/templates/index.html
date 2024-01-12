@@ -110,7 +110,6 @@ function myFunction2() {
     document.getElementById("question").style.display = "none";
   } else {
     text = "Hello " + user + "! Welcome to my website!";
-    document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
     document.getElementById("question").style.display = "none";
   }
   document.getElementById("demo2").innerHTML = text;
@@ -129,10 +128,10 @@ function myFunction2() {
     if (response == "yes"); {
     alert("Thank you for enjoying my website.");
     }
-  }
+  };
 
-  elem.addEventListener("click", thankyou1); // Thanks!
-  elem.addEventListener("click", thankyou2); // Thanks again!
+  elem.addEventListener("click", thankyou1);
+  elem.addEventListener("click", thankyou2);
 </script>
 
 </body>
