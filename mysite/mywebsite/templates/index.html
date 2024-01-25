@@ -11,11 +11,15 @@
   }
     </style>
     <h1>Hello!</h1>
-
+      <a href="{% url 'interests' %}">Interests</a>
+      <p id="introduction">This website is a personal website that I have been developing by myself.<br> It will discuss my
+      interests and some of my hobbies.</p>
+    <br>
+    <br>
     <input id="blue" type="button" value="Change to Blue" button OnClick="colorBlue()">
     <input id="white" type="button" value="Change to White" button OnClick="colorWhite()">
 
-    <p>Click hidden to make the button beside it disappear.</p>
+    <p>Click <b>Hidden</b> to make the button beside it disappear.</p>
 
     <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
 
@@ -30,7 +34,7 @@
 
     <h2>About Me</h2>
 
-    <p>Hover over the interests button to display some of my interests.</p>
+    <p>Hover over the <b>Interests</b> button to display some of my interests.</p>
 
     <input id="hover" type="button" value="Interests" onmouseover="hoverOver()" onmouseleave="mouseLeave()">
 
@@ -70,7 +74,7 @@
       }
     </script>
 
-    <p>Click the button below for more details about me.</p>
+    <p>Click the <b>Details</b> button below for more details about me.</p>
         
     <input id="Details" type="button" value="Details" OnClick="myFunction()">
         
