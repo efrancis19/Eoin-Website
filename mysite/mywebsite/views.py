@@ -7,4 +7,9 @@ def index(request):
 def interests(request):
     return render(request, 'interests.html')
 
+def versailles(request):
+    return render(request, 'versailles.html')
+
+def contact(request):
+    return render(request, 'contact.html')
 # Create your views here.

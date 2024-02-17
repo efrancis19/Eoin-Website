@@ -1,29 +1,62 @@
-body {background-color: #ebf2f2;}
+body {background-color: #ebf2f2;
+        margin-left: 6%;
+        margin-right: 6%;}       /* Body of webpage */
 
 h1 {background-color: blue;
-    border: 4px solid black;
-    color: white;
-    padding: 5px;
-    margin-right: 40%;}
+    color: white;  
+    font-family: sans-serif;           /* H1 header */
+    border: 5px solid black;
+    padding: 8px;
+    border: 5px solid black;
+    display: inline-block;}
 
-h2 {background-color: blue;
+h2 {background-color: #0055FF;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px;
     border: 2px solid black;
     border-radius: 6px;
-    color: white;
-    padding: 5px;
-    margin-right: 60%;}
+    margin-right: 60%;
+    margin-top: 1px;
+    margin-bottom: 8px;
+    display: inline-block;}
 
-a {background-color: green;
-color: white;
-border: 2px solid black;}
+h3.countries {background-color: #4D88FF;
+              color: white;
+              font-family: sans-serif;
+              padding: 3px;
+              border: 2px solid black;
+              border-radius: 10px;
+              display: inline-block;}
 
-input {background-color: #0385ff;
+p {margin-right: 40%;
+   font-family: sans-serif;}
+
+a {background-color: #FFFF00;           /* Yellow is used as a complementary colour to blue as part of a complementary colour scheme. I chose to use yellow instead of green because red-green colour blindness is the most common form of colour blindness. Yellow also draws the user's attention and symbolises happiness in psychology. https://muffingroup.com/blog/yellow-color-palette/#:~:text=Using%20yellow%20effectively%20in%20your,to%2Daction%20buttons%20or%20headlines. */
+   color: black;                   
+   font-family: sans-serif;              
+   border: 2px solid black;             
+   margin: 0px;}
+
+ul {list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;}
+      
+li {float: left;}
+      
+li a {display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;}
+
+a:hover {background-color: #FCBA03;}       /* When page links are hovered over */
+
+input {background-color: #0385ff;       
         color: white;}
 
-#introduction {background-color: #03d3ff;
-                margin-right: 60%}
-
-#blue {background-color: #0385ff;
+#blue {background-color: #0385ff;               
         color: white;}
 
 #blue:hover {background-color: #03b3ff;
@@ -33,3 +66,39 @@ input {background-color: #0385ff;
         color: black;}       
 
 #newsection {border-top: 2px solid black;}
+
+.mainpage {border: 4px solid black;             /* Border around main content */
+        padding: 10px;
+        margin-top: 12px;}
+
+.section {border-top: 3px solid black;
+        margin-top: 6px;
+        margin-bottom: 6px;}
+
+img {border: 4px solid red;
+        outline: 4px solid blue;
+        padding: 4px;}
+
+.image_desc {border: 2px solid black;
+        margin-right: 55%;
+        margin-top: 10px;}
+
+li {color: yellow;}
+
+li:nth-child(odd) {
+        color: blue;
+}
+
+li:nth-child(even) {
+        color: green;
+}
+
+.footer {
+        position: relative;
+        bottom: -10;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #C1D7D7;
+        padding: 5px;
+}

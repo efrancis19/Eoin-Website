@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style_css.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+<body>
+<h1>Contact</h1>
+<ul>
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'interests' %}">Interests</a></li>
+  </ul>
+  <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
+<p>Enter your email and password below.</p>
+
+<form>
+    <div class="mb-3">
+        <label class="form-label" for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    <div class="mb-3">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+</body>
+<div class="footer">
+    <p><b>Miscellaneous</b></p>
+    <p>About This Site</p>
+  </div>
+</html>

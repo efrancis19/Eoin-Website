@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style_css.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+<body>
+    <h1>Palace of Versailles</h1>
+    <ul>
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'interests' %}">Interests</a></li>
+    </ul>
+    <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
+</body>
+<div class="footer">
+  <p><b>Miscellaneous</b></p>
+  <p>About This Site</p>
+</div>
+</html>

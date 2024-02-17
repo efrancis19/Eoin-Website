@@ -2,6 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="{% static 'style_css.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
   </head>
 <body>
 
@@ -11,27 +14,16 @@
   }
     </style>
     <h1>Hello!</h1>
-      <a href="{% url 'interests' %}">Interests</a>
-      <p id="introduction">This website is a personal website that I have been developing by myself.<br> It will discuss my
-      interests and some of my hobbies.</p>
+    <ul>
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'interests' %}">Interests</a></li>
+    </ul>
+    <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
+    <div class="mainpage">
+      <div class="welcome"><h2>Welcome!</h2></div>
+      <h3>This website is a personal website that I have been developing by myself.<br> It will discuss my
+      interests and some of my hobbies. It also highlights some of my skills relating to web design.</h3>
     <br>
-    <br>
-    <input id="blue" type="button" value="Change to Blue" button OnClick="colorBlue()">
-    <input id="white" type="button" value="Change to White" button OnClick="colorWhite()">
-
-    <p>Click <b>Hidden</b> to make the button beside it disappear.</p>
-
-    <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
-
-    <input id="shown" type="button" value="Visible">
-
-    <script>
-      function showhidden() {
-        document.getElementById("shown").style.visibility = "hidden"
-        document.getElementsByClassName("button") = "shown"
-      }
-    </script>
-
     <h2>About Me</h2>
 
     <p>Hover over the <b>Interests</b> button to display some of my interests.</p>
@@ -138,6 +130,33 @@ function myFunction2() {
   elem.addEventListener("click", thankyou2);
 </script>
 
-</body>
+<input id="blue" type="button" value="Change to Blue" button OnClick="colorBlue()">
+    <input id="white" type="button" value="Change to White" button OnClick="colorWhite()">
 
+    <p>Click <b>Hidden</b> to make the button beside it disappear.</p>
+
+    <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
+
+    <input id="shown" type="button" value="Visible">
+
+    <script>
+      function showhidden() {
+        document.getElementById("shown").style.visibility = "hidden"
+        document.getElementsByClassName("button") = "shown"
+      }
+    </script>
+</div>
+</div>
+<a class="btn btn-primary" role="button" onclick="topFunction()">Return to Top</a>
+<script>
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
+</body>
+<div class="footer">
+  <p><b>Miscellaneous</b></p>
+  <p>About This Site</p>
+</div>
 </html>
