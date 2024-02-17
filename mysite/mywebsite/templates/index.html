@@ -16,6 +16,7 @@
     <h1>Hello!</h1>
     <ul>
       <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
       <li><a href="{% url 'interests' %}">Interests</a></li>
     </ul>
     <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
@@ -28,19 +29,21 @@
 
     <p>Hover over the <b>Interests</b> button to display some of my interests.</p>
 
-    <input id="hover" type="button" value="Interests" onmouseover="hoverOver()" onmouseleave="mouseLeave()">
+    <input id="hover" type="button" value="Interests" onmouseover="hoverOver()" onmouseleave="mouseLeave()">    <!-- Run the hoverOver function on hover. Run mouseLeave when mouse leaves. -->
 
     <ul id="interests"></ul>
 
-    <p id="mouseleave"></p>
+    <p id="mouseleave"></p>   <!-- This element is displayed via the mouseLeave function below  -->
 
     <script>
       function hoverOver()
+      // Display the p tag with the id "interests" above.
       {
         document.getElementById("interests").innerHTML = "Chess, France, Creating simple games with Python.";
       }
 
       function mouseLeave()
+      // Display the p tag with the id "mouseleave" and hide the p tag with the id "interests".
       {
         document.getElementById("mouseleave").innerHTML = "Continue for further details about me.";
         document.getElementById("interests").style.visibility = "hidden";
@@ -90,21 +93,30 @@
 <script>
 
 function myFunction2() {
+  // Empty variable "text"
   let text;
+  // Initialise "user" as a prompt requesting the user to enter their name.
   let user = prompt("Please enter your name: Your name should be at least 3 characters long", "Name");
+  // If user's response is blank.
   if (user == null || user == "") {
+    // Assign response to "text".
     text = "User cancelled the prompt.";
+    // Return response through p id that is "demo2" and in red.
     document.getElementById("demo2").innerHTML = text;
     document.getElementById("demo2").style.color = "red";
+    // If the length of the user's response is less than 3.
   } else if (user.length < 3) {
     text = "Name is too short. Try again.";
     error = "Try again.";
     document.getElementById("demo2").innerHTML = text;
     document.getElementById("error").innerHTML = error;
+    // If the user's response is "Eoin".
   } else if (user == "Eoin") {
     text = "Hello me! We have the same name!";
     document.getElementById("question").style.display = "none";
+    // If none of the above conditions are met.
   } else {
+    // Return greeting with user's name via the "question" id.
     text = "Hello " + user + "! Welcome to my website!";
     document.getElementById("question").style.display = "none";
   }
@@ -125,7 +137,7 @@ function myFunction2() {
     alert("Thank you for enjoying my website.");
     }
   };
-
+  // Start function "thankyou1" once element whose id is "elem" is clicked.
   elem.addEventListener("click", thankyou1);
   elem.addEventListener("click", thankyou2);
 </script>
@@ -150,8 +162,8 @@ function myFunction2() {
 <a class="btn btn-primary" role="button" onclick="topFunction()">Return to Top</a>
 <script>
   function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 </script>
 </body>
