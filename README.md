@@ -6,7 +6,7 @@ Personal Website.
 ## Description
 This website demonstrates much of my skills relating to Javascript such as changing the appearance of the website by clicking a button and the use of an if statement in a prompt.
 I have also included a base CSS design that I will continue to improve in the future.
-Note:The issue with the css file appears to be resolved.
+Note: I plan to relocate much of the Javascript on the index page to a different page.
 
 ## Getting started
 
