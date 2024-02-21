@@ -4,8 +4,8 @@
 Personal Website.
 
 ## Description
-This website demonstrates much of my web design skills. It also outlines some of my hobbies and interests and will also include a section on my skills.
-Note: I plan to relocate much of the Javascript on the index page to a different page.
+This website demonstrates some of my web design skills. It also outlines some of my hobbies and interests and will also include a section on my computing skills.
+Note: I plan to relocate much of the Javascript on the index page to a page which outlines my skills.
 
 ## Getting started
 
