@@ -4,8 +4,7 @@
 Personal Website.
 
 ## Description
-This website demonstrates much of my skills relating to Javascript such as changing the appearance of the website by clicking a button and the use of an if statement in a prompt.
-I have also included a base CSS design that I will continue to improve in the future.
+This website demonstrates much of my web design skills. It also outlines some of my hobbies and interests and will also include a section on my skills.
 Note: I plan to relocate much of the Javascript on the index page to a different page.
 
 ## Getting started
