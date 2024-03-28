@@ -6,18 +6,26 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}
   </head>
+<br>
 <body>
-    <h1>Palace of Versailles</h1>
+  <div class="navbar">
     <ul>
       <li><a href="{% url 'index' %}">Home</a></li>
       <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
-      <li><a href="{% url 'interests' %}">Interests</a></li>
+      <li><a class="active" href="{% url 'interests' %}">Interests</a></li>
+      <li><input type="text" placeholder="Search"></li>
+      <li><a class="btn btn-danger" href="{% url 'contact' %}">Contact</a></li>
     </ul>
-    <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
-    <div class="mainpage">
-      <p>I visited the Palace of Versailles for the first time last year. My most favourite part of the palace
-        was the Hall of Mirrors.</p>
+  </div>
+  <div id="title">
+    <h1>Palace of Versailles</h1>
+  </div>
+  <div class="mainpage">
+    <p>I visited the Palace of Versailles for the first time last year. My most favourite part of the palace
+    was the Hall of Mirrors.</p>
+    <div class="mt-8"></div>
     <h2>Facts About the Palace</h2>
+      <div class="mt-5"></div>
       <h3>People Involved In The Construction Of The Palace</h3>
         <p>The Palace of Versailles served as the center of power in France from the reign of Louis XIV until
           the French Revolution. Several people played important roles in the development of the palace including:</p>
@@ -27,22 +35,24 @@
           <li><b>Andre Le Notre:</b> Served as the landscape architect, working on the gardens of the palace.</li>
           <li><b>Charles Le Brun:</b> Served as the main painter and decorator, designing much of the palace's interior.</li>
         </ul>
+      <div class="mt-5"></div>
       <h3>The Petit Trianon</h3>
         <p>Queen Marie Antoinette built a mini palace for herself called the Petit Trianon. She also built a mini French
           town around the palace which included facilities such as farms and servant quarters.</p>
-      <h2>References</h2>
+    <h2>References</h2>
       <p>Hill, M, Top 10 Facts About Versailles, ParisPass, Retrieved From <a href="https://parispass.com/en/blog/top-10-facts-about-versailles">Link</a>
-    </div>
-    <a class="btn btn-primary" role="button" onclick="topFunction()">Return to Top</a>
-    <script>
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
+  </div>
+  <a class="btn btn-primary" role="button" onclick="topFunction()">Return to Top</a>
+  <script>
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 <div class="footer">
   <p><b>Miscellaneous</b></p>
+  <a href="https://www.linkedin.com/in/eoin-francis/">My LinkedIn Profile</a>
   <p>About This Site</p>
 </div>
 </html>

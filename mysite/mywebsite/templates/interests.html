@@ -6,55 +6,60 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}
   </head>
+<br>
 <body>
+  <div class="navbar">
+  <ul>
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+    <li><a class="active" href="{% url 'interests' %}">Interests</a></li>
+    <li><input type="text" placeholder="Search"></li>
+    <li><a class="btn btn-danger" href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+  </div>
+  <div class="title">
     <h1>My Interests</h1>
-    <ul>
-      <li><a href="{% url 'index' %}">Home</a></li>
-      <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
-      <li><a href="{% url 'interests' %}">Interests</a></li>
-    </ul>
-    <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
+  </div>
     <div class="mainpage">
-        <h2>My Favourite Country: France</h2>
-          <img style="max-width: 500px; height: auto; " src="{% static 'palace_of_versailles.jpg' %}" />
-        <div class="image_desc">
-          <p>The Palace of Versailles, one of my most favourite attractions in France.</p>
-          <a class="btn btn-warning" href="{% url 'versailles' %}">More Info</a>
-        </div>
-        <p>I have travelled to France several times in the past. I have visited Paris and have seen many of it's famous
-          sites.<br>
+      <h2>My Favourite Country: France</h2>
+        <img style="max-width: 500px; height: auto; " src="{% static 'palace_of_versailles.jpg' %}" />
+      <div class="image_desc">
+        <p>The Palace of Versailles, one of my most favourite attractions in France.</p>
+        <a class="btn btn-warning" href="{% url 'versailles' %}">More Info</a>
+      </div>
+      <p>I have travelled to France several times in the past. I have visited Paris and have seen many of it's famous
+        sites.<br>
         One of my most favourite places in France is the Palace of Versailles.</p>
-        <div class="m-3"></div>
+      <div class="mt-8"></div>
         <h2>My Other Favourite Countries</h2>
-        <div class="m-5"></div>
-          <h3>Austria</h3>
-            <p>I have visited Vienna the capital of Austria.</p>
-        <div class="m-5"></div>
-          <h3>Italy</h3>
-            <p>I have visited Rome and several of it's famous sites. These sites include:</p>
-            <ul>
-              <li>The Colosseum.</li>
-              <li>The Trevi Fountain.</li>
-              <li>The Vatican City.</li>
-            </ul>
+      <div class="mt-5"></div>
+        <h3>Austria</h3>
+          <p>I have visited Vienna the capital of Austria.</p>
+      <div class="mt-5"></div>
+        <h3>Italy</h3>
+          <p>I have visited Rome and several of it's famous sites. These sites include:</p>
+          <ul>
+            <li class="locations">The Colosseum.</li>
+            <li class="locations">The Trevi Fountain.</li>
+            <li class="locations">The Vatican City.</li>
+          </ul>
         <div class="m-5"></div>
           <h3>Netherlands</h3>
             <p>I have visited Amsterdam and several sites across the Netherlands including the Zaanse Schans.</p>
-        </body>
-        <h2>References</h2>
-        <br>
-        By Photo: <a href="//commons.wikimedia.org/wiki/User:Myrabella" title="User:Myrabella">Myrabella</a>&nbsp;/&nbsp;<a href="//commons.wikimedia.org/wiki/Main_Page" title="Main Page">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=15781169">Link</a>
-      </div>
+  <h2>References</h2>
+  <br>
+    By Photo: <a href="//commons.wikimedia.org/wiki/User:Myrabella" title="User:Myrabella">Myrabella</a>&nbsp;/&nbsp;<a href="//commons.wikimedia.org/wiki/Main_Page" title="Main Page">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=15781169">Link</a>
+  </div>
     <a class="btn btn-primary" role="button" onclick="topFunction()">Return to Top</a>
 </body>
-<div class="footer">
-  <p><b>Miscellaneous</b></p>
-  <p>About This Site</p>
-</div>
 <script>
   function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 </script>
-</html>
+<div class="footer">
+  <p><b>Miscellaneous</b></p>
+  <a href="https://www.linkedin.com/in/eoin-francis/">My LinkedIn Profile</a>
+  <p>About This Site</p>
+</div>

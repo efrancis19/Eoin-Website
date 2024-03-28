@@ -6,14 +6,20 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}
   </head>
+<br>
 <body>
-<h1>Contact</h1>
-<ul>
+  <div class="navbar">
+  <ul>
     <li><a href="{% url 'index' %}">Home</a></li>
     <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
-    <li><a href="{% url 'interests' %}">Interests</a></li>
+    <li><a class="active" href="{% url 'interests' %}">Interests</a></li>
+    <li><input type="text" placeholder="Search"></li>
+    <li><a class="btn btn-danger" href="{% url 'contact' %}">Contact</a></li>
   </ul>
-  <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
+  </div>
+  <div class="title">
+    <h1>Contact</h1>
+  </div>
 <p>Enter your email and password below.</p>
 
 <form>
@@ -41,6 +47,7 @@
 </body>
 <div class="footer">
     <p><b>Miscellaneous</b></p>
+    <a href="https://www.linkedin.com/in/eoin-francis/">My LinkedIn Profile</a>
     <p>About This Site</p>
   </div>
 </html>

@@ -6,159 +6,154 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}
   </head>
+<br>
 <body>
-
-    <style>
-  button {
-    margin: 10px;
-  }
-    </style>
-    <h1>Hello!</h1>
+  <div class="navbar">
     <ul>
-      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a class="active" href="{% url 'index' %}">Home</a></li>
       <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
       <li><a href="{% url 'interests' %}">Interests</a></li>
+      <li><input type="text" placeholder="Search"></li>
+      <li><a class="btn btn-danger" href="{% url 'contact' %}">Contact</a></li>
     </ul>
-    <a class="btn btn-danger" href="{% url 'contact' %}">Contact</a>
-    <div class="mainpage">
-      <div class="welcome"><h2>Welcome!</h2></div>
+  </div>
+  <div class="title">
+    <h1>Home</h1>
+  </div>
+  <div class="mainpage">
+    <div class="welcome"><h2>Welcome!</h2></div>
+      <div class="mt-5"></div>
       <h3 class="introduction">This website is a personal website that I have been developing by myself.<br> It will discuss my
       interests and some of my hobbies. It also highlights some of my skills relating to web design.</h3>
-    <br>
+    <div class="mt-8"></div>
     <h2>About Me</h2>
+      <p>Hover over the <b>Interests</b> button to display some of my interests.</p>
+      <input id="hover" type="button" value="Interests" onmouseover="hoverOver()" onmouseleave="mouseLeave()">    <!-- Run the hoverOver function on hover. Run mouseLeave when mouse leaves. -->
+      <ul id="interests"></ul>
+      <p id="mouseleave"></p>   <!-- This element is displayed via the mouseLeave function below  -->
+      <script>
+        function hoverOver()
+        // Display the p tag with the id "interests" above.
+        {
+          document.getElementById("interests").innerHTML = "Chess, France, Creating simple games with Python.";
+        }
 
-    <p>Hover over the <b>Interests</b> button to display some of my interests.</p>
+        function mouseLeave()
+        // Display the p tag with the id "mouseleave" and hide the p tag with the id "interests".
+        {
+          document.getElementById("mouseleave").innerHTML = "Continue for further details about me.";
+          document.getElementById("interests").style.visibility = "hidden";
+        }
+      </script>
 
-    <input id="hover" type="button" value="Interests" onmouseover="hoverOver()" onmouseleave="mouseLeave()">    <!-- Run the hoverOver function on hover. Run mouseLeave when mouse leaves. -->
+      <script>
+        function colorBlue()
+        {
+          alert("An alternate design for the website.");
+          document.getElementsByTagName("body")[0].style.backgroundColor = "blue"; 
+          document.getElementsByTagName("body")[0].style.color = "white";
+          document.getElementsByTagName("body")[0].style.fontSize = "20px";
+        }
 
-    <ul id="interests"></ul>
+        function colorWhite()
+        {
+          alert("Returned to standard design.");
+          document.getElementsByTagName("body")[0].style.backgroundColor = "white"; 
+          document.getElementsByTagName("body")[0].style.color = "black";
+          document.getElementsByTagName("body")[0].style.fontSize = "16px";
+        }
+      </script>
 
-    <p id="mouseleave"></p>   <!-- This element is displayed via the mouseLeave function below  -->
-
-    <script>
-      function hoverOver()
-      // Display the p tag with the id "interests" above.
-      {
-        document.getElementById("interests").innerHTML = "Chess, France, Creating simple games with Python.";
-      }
-
-      function mouseLeave()
-      // Display the p tag with the id "mouseleave" and hide the p tag with the id "interests".
-      {
-        document.getElementById("mouseleave").innerHTML = "Continue for further details about me.";
-        document.getElementById("interests").style.visibility = "hidden";
-      }
-    </script>
-
-    <script>
-
-      function colorBlue()
-      {
-        alert("An alternate design for the website.");
-        document.getElementsByTagName("body")[0].style.backgroundColor = "blue"; 
-        document.getElementsByTagName("body")[0].style.color = "white";
-        document.getElementsByTagName("body")[0].style.fontSize = "20px";
-      }
-
-      function colorWhite()
-      {
-        alert("Returned to standard design.");
-        document.getElementsByTagName("body")[0].style.backgroundColor = "white"; 
-        document.getElementsByTagName("body")[0].style.color = "black";
-        document.getElementsByTagName("body")[0].style.fontSize = "16px";
-      }
-    </script>
-
-    <p>Click the <b>Details</b> button below for more details about me.</p>
+      <p>Click the <b>Details</b> button below for more details about me.</p>
         
-    <input id="Details" type="button" value="Details" OnClick="myFunction()">
+      <input id="Details" type="button" value="Details" OnClick="myFunction()">
         
-    <p id="script1"></p>
+      <p id="script1"></p>
     
-    <script>
+      <script>
         function myFunction() {
           document.getElementById("script1").innerHTML = "I am currently enrolled in the Computing for Business course in DCU." +
           "I have travelled to several countries across Europe. Some of these include my favourites which are France and Austria." +
           "I am particularly fond of France for it's history, art and language.";
         }
-    </script>
+      </script>
 
-<p id ="question">What is your name?</p>
+    <p id ="question">What is your name?</p>
 
-<input id="button2" type="button" value="Name" onclick="myFunction2()">
+    <input id="button2" type="button" value="Name" onclick="myFunction2()">
 
-<p id="demo2"></p>
-<p id="error"></p>
-
-<script>
-
-function myFunction2() {
-  // Empty variable "text"
-  let text;
-  // Initialise "user" as a prompt requesting the user to enter their name.
-  let user = prompt("Please enter your name: Your name should be at least 3 characters long", "Name");
-  // If user's response is blank.
-  if (user == null || user == "") {
-    // Assign response to "text".
-    text = "User cancelled the prompt.";
-    // Return response through p id that is "demo2" and in red.
-    document.getElementById("demo2").innerHTML = text;
-    document.getElementById("demo2").style.color = "red";
-    // If the length of the user's response is less than 3.
-  } else if (user.length < 3) {
-    text = "Name is too short. Try again.";
-    error = "Try again.";
-    document.getElementById("demo2").innerHTML = text;
-    document.getElementById("error").innerHTML = error;
-    // If the user's response is "Eoin".
-  } else if (user == "Eoin") {
-    text = "Hello me! We have the same name!";
-    document.getElementById("question").style.display = "none";
-    // If none of the above conditions are met.
-  } else {
-    // Return greeting with user's name via the "question" id.
-    text = "Hello " + user + "! Welcome to my website!";
-    document.getElementById("question").style.display = "none";
-  }
-  document.getElementById("demo2").innerHTML = text;
-  }
-</script>
-
-<input id="elem" type="button" value="Click me"/>
-
-<script>
-  function thankyou1() {
-    alert('Thank you for visiting my website!');
-  };
-
-  function thankyou2() {
-    response = prompt("Do you like this website? Type yes if you did.", "");
-    if (response == "yes"); {
-    alert("Thank you for enjoying my website.");
-    }
-  };
-  // Start function "thankyou1" once element whose id is "elem" is clicked.
-  elem.addEventListener("click", thankyou1);
-  elem.addEventListener("click", thankyou2);
-</script>
-
-<input id="blue" type="button" value="Change to Blue" button OnClick="colorBlue()">
-    <input id="white" type="button" value="Change to White" button OnClick="colorWhite()">
-
-    <p>Click <b>Hidden</b> to make the button beside it disappear.</p>
-
-    <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
-
-    <input id="shown" type="button" value="Visible">
+    <p id="demo2"></p>
+    <p id="error"></p>
 
     <script>
-      function showhidden() {
-        document.getElementById("shown").style.visibility = "hidden"
-        document.getElementsByClassName("button") = "shown"
+
+    function myFunction2() {
+      // Empty variable "text"
+      let text;
+      // Initialise "user" as a prompt requesting the user to enter their name.
+      let user = prompt("Please enter your name: Your name should be at least 3 characters long", "Name");
+      // If user's response is blank.
+      if (user == null || user == "") {
+        // Assign response to "text".
+        text = "User cancelled the prompt.";
+        // Return response through p id that is "demo2" and in red.
+        document.getElementById("demo2").innerHTML = text;
+        document.getElementById("demo2").style.color = "red";
+        // If the length of the user's response is less than 3.
+      } else if (user.length < 3) {
+        text = "Name is too short. Try again.";
+        error = "Try again.";
+        document.getElementById("demo2").innerHTML = text;
+        document.getElementById("error").innerHTML = error;
+        // If the user's response is "Eoin".
+      } else if (user == "Eoin") {
+        text = "Hello me! We have the same name!";
+        document.getElementById("question").style.display = "none";
+        // If none of the above conditions are met.
+      } else {
+        // Return greeting with user's name via the "question" id.
+        text = "Hello " + user + "! Welcome to my website!";
+        document.getElementById("question").style.display = "none";
+      }
+      document.getElementById("demo2").innerHTML = text;
       }
     </script>
-</div>
-</div>
+
+    <input id="elem" type="button" value="Click me"/>
+
+    <script>
+      function thankyou1() {
+        alert('Thank you for visiting my website!');
+      };
+
+      function thankyou2() {
+        response = prompt("Do you like this website? Type yes if you did.", "");
+        if (response == "yes"); {
+        alert("Thank you for enjoying my website.");
+        }
+      };
+      // Start function "thankyou1" once element whose id is "elem" is clicked.
+      elem.addEventListener("click", thankyou1);
+      elem.addEventListener("click", thankyou2);
+    </script>
+
+    <input id="blue" type="button" value="Change to Blue" button OnClick="colorBlue()">
+        <input id="white" type="button" value="Change to White" button OnClick="colorWhite()">
+
+        <p>Click <b>Hidden</b> to make the button beside it disappear.</p>
+
+        <input id="hidden" type="button" value="Hidden" onclick="showhidden()">
+
+        <input id="shown" type="button" value="Visible">
+
+        <script>
+          function showhidden() {
+            document.getElementById("shown").style.visibility = "hidden"
+            document.getElementsByClassName("button") = "shown"
+          }
+        </script>
+  </div>
+</body>
 <a class="btn btn-primary" role="button" onclick="topFunction()">Return to Top</a>
 <script>
   function topFunction() {
@@ -166,9 +161,9 @@ function myFunction2() {
     document.documentElement.scrollTop = 0;
   }
 </script>
-</body>
 <div class="footer">
   <p><b>Miscellaneous</b></p>
+  <a href="https://www.linkedin.com/in/eoin-francis/">My LinkedIn Profile</a>
   <p>About This Site</p>
 </div>
 </html>
