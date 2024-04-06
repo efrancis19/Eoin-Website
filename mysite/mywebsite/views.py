@@ -15,4 +15,7 @@ def contact(request):
 
 def versailles(request):
     return render(request, 'versailles.html')
+
+def new_file(request):
+    return render(request, 'new_file.html')
 # Create your views here.

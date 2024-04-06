@@ -1,7 +1,9 @@
-body {background-color: #ebf2f2;        /* Body of webpage */
+/* Body of webpage */
+body {background-color: #ebf2f2;
         margin-left: 26%;}
 
-h1 {background-color: blue;             /* H1 header */
+/* H1 header */
+h1 {background-color: blue;
     color: white;  
     font-family: sans-serif;
     border: 5px solid black;
@@ -10,7 +12,8 @@ h1 {background-color: blue;             /* H1 header */
     display: inline-block;
     margin-left: 5%}
 
-h2 {background-color: #0055FF;          /* H2 header */
+/* H2 header */
+h2 {background-color: #0055FF;
     color: white;
     font-family: sans-serif;
     padding: 5px;
@@ -28,27 +31,28 @@ h3.introduction {
     padding: 3px;
     display: inline-block;}
 
-h3{background-color: #4D88FF;
-              color: white;
-              font-family: sans-serif;
-              padding: 3px;
-              border: 2px solid black;
-              border-radius: 10px;
-              display: inline-block;}
+h3 {background-color: #4D88FF;
+    color: white;
+    font-family: sans-serif;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline-block;}
 
 p {margin-right: 40%;
    font-family: sans-serif;}
 
-a {background-color: #FFFF00;           /* Yellow is used as a complementary colour to blue as part of a complementary colour scheme. I chose to use yellow instead of green because red-green colour blindness is the most common form of colour blindness. Yellow also draws the user's attention and symbolises happiness in psychology. https://muffingroup.com/blog/yellow-color-palette/#:~:text=Using%20yellow%20effectively%20in%20your,to%2Daction%20buttons%20or%20headlines. */
+/* Yellow is used as a complementary colour to blue as part of a complementary colour scheme. I chose to use yellow instead of green because red-green colour blindness is the most common form of colour blindness. Yellow also draws the user's attention and symbolises happiness in psychology. https://muffingroup.com/blog/yellow-color-palette/#:~:text=Using%20yellow%20effectively%20in%20your,to%2Daction%20buttons%20or%20headlines. */
+a {background-color: #FFFF00;           
    color: black;                   
    font-family: sans-serif;              
    border: 2px solid black;             
    margin-left: 0px;}
 
 ul {list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;}
+    margin: 0;
+    padding: 0;
+    overflow: hidden;}
       
 li {float: left;
     color: black;
@@ -64,63 +68,109 @@ li a {display: block;
 
 li a.active {background-color: green;}
 
-li a:hover {background-color: blue;}       /* When page links are hovered over. */
+/* When page links are hovered over. */
+li a:hover {background-color: blue;}    
 
-.navbar {                                       /* Navbar located at the top of each page. */
-        overflow: hidden;
-      }
+/* Navbar located at the top of each page. */
+.navbar {overflow: hidden;}
       
-      .navbar a {                               /* Individual elements within the navbar. */
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
+      /* Individual elements within the navbar. */
+      .navbar a {float: left;
+                 color: black;
+                 text-align: center;
+                 padding: 14px 16px;
+                 text-decoration: none;
+                 font-size: 17px;}
       
-      .navbar a:hover {
-        color: black;
-      }
+      .navbar a:hover {color: black;}
       
-      .navbar a.active {
-        background-color: #4D88FF;
-        color: white;
-      }
+      .navbar a.active {background-color: #4D88FF;
+                        color: white;}
 
       .navbar a.active:hover {background-color: blue;}
 
 input {background-color: white;}
 
 #blue {background-color: #0385ff;               
-        color: white;}
+       color: white;}
 
 #blue:hover {background-color: #03b3ff;
-            color: white;}
+             color: white;}
 
 #white {background-color: white;
         color: black;}
 
-.mainpage {border: 4px solid black;             /* Border around main content. */
-        padding: 10px;
-        margin-top: 12px;
-        margin-left: 5%;                          /* The margin of the main border surrounding the main content. */
-        margin-right: 5%}
+/* Border around main content. */
+.mainpage {border: 4px solid black;          
+           padding: 10px;
+           margin-top: 12px;
+           margin-left: 5%;                          /* The margin of the main border surrounding the main content. */
+           margin-right: 5%}
 
-img {border: 4px solid red;                     /* Border around images. */
-        outline: 4px solid blue;
-        padding: 4px;}
+/* Border around images. */
+img {border: 4px solid red;
+     outline: 4px solid blue;
+     padding: 4px;}
 
 .image_desc {border: 2px solid black;
-        margin-right: 55%;
-        margin-top: 10px;}
+             margin-right: 55%;
+             margin-top: 10px;}
 
-.footer {                                          /* Footer at the bottom of each page. */                                        
-        position: relative;
-        bottom: -10;
-        left: 0;
-        width: 100%;
-        height: auto;
-        background-color: #C1D7D7;
-        padding: 5px;
+/* Footer at the bottom of each page. */
+.footer {position: relative;
+         bottom: -10;
+         left: 0;
+         width: 100%;
+         height: auto;
+         background-color: #C1D7D7;
+         padding: 5px;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow_container {max-width: 1000px;
+                      position: relative;
+                      margin: auto;}
+
+/* Caption text */
+.slideshow_caption {color: #FFFF00;
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;}
+
+/* Number text indicating which image is displayed in top left. */
+.text_number {color: #FFFF00;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;}
+
+/* Dots indicating which image is displayed. */
+.dot {height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;}
+
+.active {background-color: blue;}
+
+/* Transition animation */
+.animation {animation-name: fade;
+            animation-duration: 1.5s;}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
